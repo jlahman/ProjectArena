@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GameScreens/IntroScreen/IntroScreen.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Amaranth/Amaranth-Italic.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "FadeIn"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 2, 3.1, 4.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.843137, 0.815686, 0.721569, 0 ), Color( 0.843137, 0.815686, 0.721569, 0 ), Color( 0.843137, 0.815686, 0.721569, 1 ), Color( 0.843137, 0.815686, 0.721569, 1 ), Color( 0.843137, 0.815686, 0.721569, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VBoxContainer/Label2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.9, 2.5, 3.1, 4.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.843137, 0.815686, 0.721569, 0 ), Color( 0.843137, 0.815686, 0.721569, 0 ), Color( 0.843137, 0.815686, 0.721569, 1 ), Color( 0.843137, 0.815686, 0.721569, 1 ), Color( 0.843137, 0.815686, 0.721569, 0 ) ]
+}
+
+[node name="IntroScreen" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+color = Color( 0.156863, 0.121569, 0.196078, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+modulate = Color( 0.843137, 0.815686, 0.721569, 0 )
+margin_top = 163.0
+margin_right = 640.0
+margin_bottom = 178.0
+custom_fonts/font = SubResource( 2 )
+text = "A Game By Keilith Lakeson"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+modulate = Color( 0.843137, 0.815686, 0.721569, 1 )
+margin_top = 182.0
+margin_right = 640.0
+margin_bottom = 197.0
+custom_fonts/font = SubResource( 2 )
+text = "github.com/keilith-l"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/FadeIn = SubResource( 3 )

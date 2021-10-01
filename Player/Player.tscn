@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Player/MovementController.gd" type="Script" id=2]
+[ext_resource path="res://Player/Player.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 7.0
+
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
+position = Vector2( 304.056, 221.56 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="icon" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource( 2 )
+
+[node name="MovementController" type="Node2D" parent="."]
+script = ExtResource( 2 )
