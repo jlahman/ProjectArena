@@ -5,7 +5,7 @@
 
 [sub_resource type="DynamicFontData" id=1]
 hinting = 0
-font_path = "res://Major_Mono_Display/MajorMonoDisplay-Regular.ttf"
+font_path = "res://fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 use_filter = true
@@ -27,11 +27,11 @@ margin_bottom = 360.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 640.0
-margin_bottom = 49.0
+margin_bottom = 34.0
 
 [node name="HealthGUI" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
-margin_right = 151.0
-margin_bottom = 49.0
+margin_right = 42.0
+margin_bottom = 34.0
 custom_constants/margin_right = 16
 custom_constants/margin_top = 16
 custom_constants/margin_left = 16
@@ -40,8 +40,8 @@ custom_constants/margin_bottom = 16
 [node name="HealthLabel" type="Label" parent="VBoxContainer/HBoxContainer/HealthGUI"]
 margin_left = 16.0
 margin_top = 16.0
-margin_right = 135.0
-margin_bottom = 33.0
+margin_right = 26.0
+margin_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = SubResource( 2 )
@@ -50,15 +50,15 @@ align = 2
 valign = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 155.0
-margin_right = 568.0
-margin_bottom = 49.0
+margin_left = 46.0
+margin_right = 601.0
+margin_bottom = 34.0
 size_flags_horizontal = 3
 
 [node name="TimeGUI" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 572.0
+margin_left = 605.0
 margin_right = 640.0
-margin_bottom = 49.0
+margin_bottom = 34.0
 custom_constants/margin_right = 16
 custom_constants/margin_top = 16
 custom_constants/margin_left = 16
@@ -67,8 +67,8 @@ custom_constants/margin_bottom = 16
 [node name="TimeLabel" type="Label" parent="VBoxContainer/HBoxContainer/TimeGUI"]
 margin_left = 16.0
 margin_top = 16.0
-margin_right = 52.0
-margin_bottom = 33.0
+margin_right = 19.0
+margin_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = SubResource( 2 )

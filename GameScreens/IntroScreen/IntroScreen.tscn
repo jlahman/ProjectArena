@@ -3,7 +3,7 @@
 [ext_resource path="res://GameScreens/IntroScreen/IntroScreen.gd" type="Script" id=1]
 
 [sub_resource type="DynamicFontData" id=1]
-font_path = "res://Amaranth/Amaranth-Italic.ttf"
+font_path = "res://fonts/Amaranth/Amaranth-Italic.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 size = 12
