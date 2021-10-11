@@ -19,8 +19,8 @@ script = ExtResource( 3 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ScreenHolder" type="Control" parent="CanvasLayer"]
-margin_right = 641.0
-margin_bottom = 362.0
+margin_right = 640.0
+margin_bottom = 360.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
