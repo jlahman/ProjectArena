@@ -14,10 +14,12 @@ func _ready():
 	lookup_index_y = 15
 	for i in range(60):
 		sin_lookup_array.append(sin(2*PI*i/60.0))
+		
 
 func _physics_process(delta):
-	velocity.y = get_next_velocity_y()*8 + direction.y*16
-	velocity.x = get_next_velocity_x()*8 + direction.x*16
+	kinbody.rotation += delta*PI*2
+	velocity.y = get_next_velocity_y()*6 + direction.y*16*2
+	velocity.x = get_next_velocity_x()*6 + direction.x*16*2
 	kinbody.move_and_slide(velocity)
 
 func get_next_velocity_y():
@@ -29,3 +31,7 @@ func get_next_velocity_x():
 	return sin_lookup_array[lookup_index_x]*10
 
 
+func _on_Timer_timeout():
+	var x = randi() % 3 - 1
+	var y = randi() % 3 - 1
+	direction = Vector2(x,y).normalized()

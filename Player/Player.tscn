@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Player/MovementController.gd" type="Script" id=2]
 [ext_resource path="res://Player/Player.gd" type="Script" id=3]
+[ext_resource path="res://Player/Weapons/SingleFire/SingleFire.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 16.0
@@ -16,7 +17,7 @@ radius = 7.0
 position = Vector2( 304.056, 221.56 )
 script = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collidebox" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="."]
@@ -30,3 +31,7 @@ shape = SubResource( 2 )
 
 [node name="MovementController" type="Node2D" parent="."]
 script = ExtResource( 2 )
+
+[node name="ActiveWeaponSlot" type="Node2D" parent="."]
+
+[node name="SingleFire" parent="ActiveWeaponSlot" instance=ExtResource( 4 )]
