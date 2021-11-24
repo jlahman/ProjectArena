@@ -17,7 +17,7 @@ func _ready():
 		
 
 func _physics_process(delta):
-	kinbody.rotation += delta*PI*2
+	kinbody.rotation += delta*PI
 	velocity.y = get_next_velocity_y()*6 + direction.y*16*2
 	velocity.x = get_next_velocity_x()*6 + direction.x*16*2
 	kinbody.move_and_slide(velocity)

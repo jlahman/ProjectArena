@@ -30,7 +30,7 @@ func _on_timer_timeout():
 	timer.disconnect("timeout", self, "_on_timer_timeout")
 	timer.queue_free()
 	print("asjdkf")
-	current_scene.start()
+#	current_scene.start()
 	
 func change_scene(scene_path):
 	current_scene = find_node("ScreenHolder").get_child(0)

@@ -18,13 +18,7 @@ func _input(event):
 	pass
 
 func get_new_direction():
-	var move_direction = Vector2.ZERO
-	if(Input.is_action_pressed("move_left")):
-		move_direction += Vector2.LEFT
-	if(Input.is_action_pressed("move_right")):
-		move_direction += Vector2.RIGHT
-	if(Input.is_action_pressed("move_up")):
-		move_direction += Vector2.UP
-	if(Input.is_action_pressed("move_down")):
-		move_direction += Vector2.DOWN
-	return move_direction.normalized()
+	var horizontal = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	var vertical = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	
+	return Vector2(horizontal, vertical).normalized()
