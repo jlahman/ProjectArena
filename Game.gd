@@ -29,7 +29,6 @@ func _ready():
 func _on_timer_timeout():
 	timer.disconnect("timeout", self, "_on_timer_timeout")
 	timer.queue_free()
-	print("asjdkf")
 #	current_scene.start()
 	
 func change_scene(scene_path):

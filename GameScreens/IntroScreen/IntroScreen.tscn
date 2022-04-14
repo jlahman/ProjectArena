@@ -61,7 +61,7 @@ margin_top = 163.0
 margin_right = 640.0
 margin_bottom = 178.0
 custom_fonts/font = SubResource( 2 )
-text = "A Game By Keilith Lakeson"
+text = "A Game By Justin Lahman"
 align = 1
 valign = 1
 
@@ -71,7 +71,7 @@ margin_top = 182.0
 margin_right = 640.0
 margin_bottom = 197.0
 custom_fonts/font = SubResource( 2 )
-text = "github.com/keilith-l"
+text = "github.com/jlahman/ProjectArena"
 align = 1
 valign = 1
 

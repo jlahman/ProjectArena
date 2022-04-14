@@ -76,5 +76,5 @@ func _on_spawn_timer_timeout():
 	index = (index + 1) % spawn_list.size()
 	timer.one_shot = true
 	timer.wait_time = abs(spawn_list[index][0] - last_time)
-	print(String(timer.wait_time))
+	#print(String(timer.wait_time))
 	timer.start()
